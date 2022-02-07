@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1EDDEDCF-E158-4AE6-863D-DEA31B895044}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>CustomALCodeCop</AssemblyName>
+    <ApplicationVersion>7.4.7.37768</ApplicationVersion>
+    <RootNamespace>CustomALCodeCop</RootNamespace>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>References\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamics.Nav.Analyzers.Common">
+      <HintPath>References\Microsoft.Dynamics.Nav.Analyzers.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis">
+      <HintPath>References\Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis.Workspaces">
+      <HintPath>References\Microsoft.Dynamics.Nav.CodeAnalysis.Workspaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="netstandard" />
+    <Reference Include="System.Collections.Immutable, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Design\Rule0001LocalVariableNaming.cs" />
+    <Compile Include="Design\Rule0011LabelPunctuation.cs" />
+    <Compile Include="Design\Rule0002GlobalVariableNaming.cs" />
+    <Compile Include="Design\Rule0003ParameterNaming.cs" />
+    <Compile Include="Design\Rule0004IfStatementBrackets.cs" />
+    <Compile Include="Design\Rule0005ExitKeywordCapitalization.cs" />
+    <Compile Include="Design\Rule0006SemicolonAfterProcedureDeclaration.cs" />
+    <Compile Include="Design\Rule0007InternalProcedures.cs" />
+    <Compile Include="Design\Rule0008ToolTipPunctuation.cs" />
+    <Compile Include="Design\Rule0010KeyNaming.cs" />
+    <Compile Include="Design\Rule0009GlobalVarTriggerAndMethodPosition.cs" />
+    <Compile Include="CustomALCodeCopAnalyzers.Designer.cs" />
+    <Compile Include="CustomALCodeCopAnalyzers.Generated.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomALCodeCopAnalyzers.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
