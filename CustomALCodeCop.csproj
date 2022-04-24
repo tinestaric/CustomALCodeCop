@@ -75,6 +75,8 @@
     <Compile Include="Design\Rule0009GlobalVarTriggerAndMethodPosition.cs" />
     <Compile Include="CustomALCodeCopAnalyzers.Designer.cs" />
     <Compile Include="CustomALCodeCopAnalyzers.Generated.cs" />
+    <Compile Include="Design\Rule0012CommitMustBeExplainedByComment.cs" />
+    <Compile Include="Design\Rule0013InternalMethodsMustHaveExplicitParameters.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>

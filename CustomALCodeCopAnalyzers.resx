@@ -219,4 +219,22 @@
   <data name="Rule0011LabelPunctuationTitle" xml:space="preserve">
     <value>Msg and Err Labels should end with a dot</value>
   </data>
+  <data name="Rule0012CommitMustBeExplainedByCommentDescription" xml:space="preserve">
+    <value>Commit() needs a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
+  <data name="Rule0012CommitMustBeExplainedByCommentFormat" xml:space="preserve">
+    <value>Commit() needs a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
+  <data name="Rule0012CommitMustBeExplainedByCommentTitle" xml:space="preserve">
+    <value>Commit() needs a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
+  <data name="Rule0013InternalMethodsMustHaveExplicitParametersDescription" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters</value>
+  </data>
+  <data name="Rule0013InternalMethodsMustHaveExplicitParametersFormat" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters</value>
+  </data>
+  <data name="Rule0013InternalMethodsMustHaveExplicitParametersTitle" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters</value>
+  </data>
 </root>
